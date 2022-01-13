@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/bedrocss">
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/api" method="POST">
+    <label for="name">
+      Name:
+      <input id="name" name="name" required>
+    </label>
+
+    <label for="email">
+      Email:
+      <input id="email" name="email" type="email" required>
+    </label>
+
+    <label for="number">
+      Number:
+      <input id="number" name="number" type="number" required min="5">
+    </label>
+
+    <fieldset>
+      <legend>What is your favorite OS?</legend>
+      <label for="windows">
+        <input type="radio" name="os" value="windows" required>
+        Window
+      </label>
+      <label for="macos">
+        <input type="radio" name="os" value="macos" required>
+        MacOS
+      </label>
+      <label for="linux">
+        <input type="radio" name="os" value="linux" required>
+        Linux
+      </label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit form</button>
+  </form>
+  <script src="/client.js" type="module"></script>
+</body>
+
+</html>

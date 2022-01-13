@@ -1,0 +1,17 @@
+{
+  "name": "pe-api",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "fastify": "^3.25.3",
+    "fastify-formbody": "^5.2.0",
+    "fastify-multipart": "^5.2.1",
+    "fastify-static": "^4.5.0"
+  }
+}
