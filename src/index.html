@@ -25,9 +25,10 @@
   <form action="/api" method="POST">
     <label for="name">
       Name:
-      <input id="name" name="name" required>
+      <input id="name" name="name" required aria-describedby="name-description">
     </label>
-
+    <div id="name-description">How you call yourself.</div>
+    
     <label for="email">
       Email:
       <input id="email" name="email" type="email" required>
@@ -41,21 +42,42 @@
     <fieldset>
       <legend>What is your favorite OS?</legend>
       <label for="windows">
-        <input type="radio" name="os" value="windows" required>
+        <input id="windows" type="radio" name="os" value="windows" required>
         Window
       </label>
       <label for="macos">
-        <input type="radio" name="os" value="macos" required>
+        <input id="macos" type="radio" name="os" value="macos" required>
         MacOS
       </label>
       <label for="linux">
-        <input type="radio" name="os" value="linux" required>
+        <input id="linux" type="radio" name="os" value="linux" required>
         Linux
       </label>
     </fieldset>
+    <fieldset>
+      <legend>Pizza Toppings</legend>
+      <label for="pineapple">
+        <input type="checkbox" name="pizza-toppings" value="pineapple" id="pineapple" required>
+        Pineapple
+      </label>
+      <label for="bacon">
+        <input type="checkbox" name="pizza-toppings" value="bacon" id="bacon" required>
+        Bacon
+      </label>
+    </fieldset>
+    
+    <label for="select">
+      Select
+      <select name="select" id="select" multiple required>
+        <option value="">Select</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </label>
 
     <br>
-    <button type="submit">Submit form</button>
+    <button type="submit">Submit</button>
   </form>
   <script src="/client.js" type="module"></script>
 </body>
